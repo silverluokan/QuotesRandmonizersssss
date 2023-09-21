@@ -14,7 +14,7 @@
         android:theme="@style/Theme.QuotesRandomizer"
         tools:targetApi="31">
         <activity
-            android:name="MyFav"
+            android:name="myfav"
             android:exported="false" />
         <activity
             android:name=".QuoteRandomActivity"
