@@ -38,7 +38,7 @@ class QuoteRandomActivity : AppCompatActivity(), View.OnClickListener {
             binding.textView3.text = lovequotess
         }
         else if(whatQuote == "Inspirational"){
-            val lovequotess = inspirationalquotes.getQuotess()
+            val lovequotess = selfquotes.getQuotess()
             binding.textView3.text = lovequotess
         }
 
@@ -63,7 +63,7 @@ class QuoteRandomActivity : AppCompatActivity(), View.OnClickListener {
                     binding.textView3.text = lovequotess
                 }
                 else if(whatQuote == "Inspirational"){
-                    val lovequotess = inspirationalquotes.getQuotess()
+                    val lovequotess = selfquotes.getQuotess()
                     binding.textView3.text = lovequotess
                 }
             }

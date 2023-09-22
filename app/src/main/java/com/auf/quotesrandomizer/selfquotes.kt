@@ -2,7 +2,7 @@ package com.auf.quotesrandomizer
 
 import kotlin.random.Random
 
-class inspirationalquotes {
+class selfquotes {
     companion object{
 
         private val inspirationalquotes = mapOf(
@@ -15,7 +15,7 @@ class inspirationalquotes {
             Pair(7,"Be courageous. Challenge orthodoxy. Stand up for what you believe in. When you are in your rocking chair talking to your grandchildren many years from now, be sure you have a good story to tell. \n—Amal Clooney"),
             Pair(8,"You make a choice: continue living your life feeling muddled in this abyss of self-misunderstanding, or you find your identity independent of it. You draw your own box. \n— Duchess Meghan"),
             Pair(9,"You define your own life. Don't let other people write your script. \n– Oprah Winfrey"),
-            Pair(10,"Only those who have suffered long, can see the light within the shadows. \n—Roronoa Zoro")
+            Pair(10,"Success is not final, failure is not fatal: it is the courage to continue that counts. \n—Winston Churchill")
         )
 
         fun getQuotess(): String? {

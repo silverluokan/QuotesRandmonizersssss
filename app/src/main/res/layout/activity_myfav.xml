@@ -23,6 +23,7 @@
         android:id="@+id/remfav"
         android:layout_width="377dp"
         android:layout_height="46dp"
+        android:backgroundTint="#FF0000"
         android:text="REMOVE FROM FAVORITE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
