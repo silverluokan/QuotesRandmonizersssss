@@ -43,12 +43,7 @@ class QuoteRandomActivity : AppCompatActivity(), View.OnClickListener {
         }
 
     }
-    fun time(): String{
-        val simpleDate = SimpleDateFormat("hh:mm:ss")
-        val currentDate = simpleDate.format(Date())
-        var timedate = "\n Timestamp : $currentDate"
-        return timedate
-    }
+
     override fun onClick(p0: View?) {
         val intent = getIntent()
         var whatQuote = intent.getExtras()?.getString("Quotess");
@@ -69,7 +64,10 @@ class QuoteRandomActivity : AppCompatActivity(), View.OnClickListener {
             }
             (R.id.btnfav)->{
                 val editor = sharedPreferences.edit()
-                editor.putString(FAVQUOTE, binding.textView3.text.toString()+time())
+                val simpleDate = System.currentTimeMillis()
+                editor.putString(FAVQUOTE, binding.textView3.text.toString())
+                editor.putLong(FAVQUOTE_TIME, simpleDate)
+
                 editor.apply()
                 var t = Toast.makeText(applicationContext, "Succesfully Added", Toast.LENGTH_SHORT)
                 t.show()

@@ -9,6 +9,9 @@ import android.view.View
 import android.widget.Toast
 import com.auf.quotesrandomizer.databinding.ActivityGetRandomQuotesBinding
 import com.auf.quotesrandomizer.databinding.ActivityMyfavBinding
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class MYFAV : AppCompatActivity(), View.OnClickListener{
     private lateinit var binding: ActivityMyfavBinding
@@ -21,8 +24,14 @@ class MYFAV : AppCompatActivity(), View.OnClickListener{
         binding.remfav.setOnClickListener(this)
         sharedPreferences  = getSharedPreferences(PREFERENCES_NAME, Context.MODE_PRIVATE)
 
-        binding.textView4.text = String.format("%s", sharedPreferences.getString(
-            FAVQUOTE,""))
+        val showFaveQuote = sharedPreferences.getString(FAVQUOTE, "")
+        val showFaveQuoteTimeStamp = sharedPreferences.getLong(FAVQUOTE_TIME, 0)
+
+        //Convert millis to Date()
+        val formattedDateTime = SimpleDateFormat("MM/dd/yyyy - hh:mm:ss", Locale.getDefault())
+            .format(Date(showFaveQuoteTimeStamp))
+
+        binding.textView4.text = "Favorite Quote\n$showFaveQuote\n$formattedDateTime"
     }
 
     override fun onClick(p0: View?) {
